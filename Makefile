@@ -468,10 +468,10 @@ lib: $(STATIC_NAME) $(DYNAMIC_NAME)
 
 everything: $(EVERYTHING_TARGETS)
 
-linecount:
-    cloc --read-lang-def=$(PROJECT).cloc \
-        src/$(PROJECT) include/$(PROJECT) tools examples \
-        python matlab
+# linecount:
+#     cloc --read-lang-def=$(PROJECT).cloc \
+#         src/$(PROJECT) include/$(PROJECT) tools examples \
+#         python matlab
 
 lint: $(EMPTY_LINT_REPORT)
 

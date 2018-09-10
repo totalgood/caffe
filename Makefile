@@ -245,7 +245,7 @@ ifeq ($(OSX), 1)
 		CUDA_VERSION := $(shell $(CUDA_DIR)/bin/nvcc -V | grep -o 'release \d' | grep -o '\d')
 		ifeq ($(shell echo | awk '{exit $(CUDA_VERSION) < 7.0;}'), 1)
 			CXXFLAGS += -stdlib=libstdc++
-			CXXFLAGS += -std=c++11
+#			CXXFLAGS += -std=c++11
 			LINKFLAGS += -stdlib=libstdc++
 		endif
 		# clang throws this warning for cuda headers
